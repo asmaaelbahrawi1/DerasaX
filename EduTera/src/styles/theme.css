@@ -1,9 +1,15 @@
 :root {
+  /* colors */
   --color-primary: #0C7288;
   --color-secondary: #1cc88a;
-  --color-danger: #e74a3b;
-  --color-dark: #2c2c2c;
-  --color-light: #f8f9fc;
+  --color-paragraph: #585858;
+  
 
-  --font-main: 'Poppins', sans-serif;
+  
+
+    /* Font */
+  --font-main: "Poppins", sans-serif;
+
+  /* Spacing */
+  --padding-section: 60px;
 }
