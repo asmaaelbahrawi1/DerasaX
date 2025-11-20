@@ -1,0 +1,74 @@
+@import './../../../styles/theme.css';
+.nav {
+    padding: 20px 35px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-main);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-image {
+    height: 45px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.title {
+    color: #0F6774;
+    font-size: 20px;
+    font-weight: bold;
+}
+.subtitle {
+    color: #68AAB6;
+    font-size: 12px;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #0F6774;
+    font-weight: 400;
+    transition: 0.2s;
+}
+.nav-links a:hover {
+    color: #68AAB6;
+    font-weight: 500;
+    transform: scale(1.1);
+}
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+button {
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+.btn-demo , .btn-signin {
+    background: linear-gradient(to bottom, #0C7288, #68AAB6);
+    color: white;
+}
+.btn-demo:hover , .btn-signin:hover {
+    background: linear-gradient(to bottom, #0A595F, #4E8A91);
+    transition: all .2s ease-in-out;
+}
