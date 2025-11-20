@@ -1,0 +1,15 @@
+:root {
+  /* colors */
+  --color-primary: #0C7288;
+  --color-secondary: #1cc88a;
+  --color-paragraph: #585858;
+  
+
+  
+
+    /* Font */
+  --font-main: "Poppins", sans-serif;
+
+  /* Spacing */
+  --padding-section: 60px;
+}
