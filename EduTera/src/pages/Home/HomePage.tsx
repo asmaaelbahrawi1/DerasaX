@@ -1,13 +1,9 @@
 import React from 'react'
-
+import Footer from '../../components/layout/Footer/Footer'
 
 export default function HomePage() {
-  return <div style={{
-      background: "var(--color-primary)",
-      color: "white",
-      padding: "20px",
-      fontFamily: "var(--font-main)"
-    }}>
-      Theme is working! 🎉
-    </div>
+  return <div>
+             <Footer />
+         </div>
+    
 }
