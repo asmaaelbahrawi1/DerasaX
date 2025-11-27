@@ -1,4 +1,8 @@
 @import './../../../styles/theme.css';
+.container{
+    width: 95%;
+    margin: auto;
+}
 .nav {
     padding: 20px 35px;
     background: #FFF;
