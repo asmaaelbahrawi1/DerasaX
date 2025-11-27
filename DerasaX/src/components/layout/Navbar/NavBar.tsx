@@ -5,7 +5,8 @@ import './Navbar.css'
 
 const NavBar = () => {
   return (
-    <nav className="nav">
+    <div className="container">
+      <nav className="nav">
       <div className="nav-left">
         <img src={Logo}  alt="EduTera Logo" className="logo-image" />
         <div className="logo-text">
@@ -20,15 +21,16 @@ const NavBar = () => {
         <a href="#">Our Product</a>
       </div>
 
-    <div className="nav-buttons">
+      <div className="nav-buttons">
         <Link to="/demo">
             <button className="btn-demo">Request a demo</button>
         </Link>
         <Link to="/signin">
             <button className="btn-signin">Sign in</button>
         </Link>
+      </div>
+      </nav>
     </div>
-    </nav>
   )
 }
 

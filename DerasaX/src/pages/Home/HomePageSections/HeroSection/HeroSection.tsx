@@ -18,28 +18,33 @@ const HeroSection = () => {
   }, []);
 
   return (
-     <section className="main-section">
-        <div className="main-container">
-        <div className="main-content">
-            <h1 className="welcome-title">
-            Welcome back to <span className="highlight">Edu<span id="t">T</span>era</span>
-            </h1>
-            <h2 className="welcome-subtitle">Smart Learning,Bright Minds</h2>
-            <p className="welcome-description">
-            An AI-powered education platform that uses adaptive learning, 
-            gamified content, and collaborative projects to
-            create personalized and effective learning experiences.
-            </p>
+    <div className="hero-container">
+        <section className="main-section">
+            <div className="main-container">
+              <div className="main-content">
+                  <h1 className="welcome-title">
+                  Welcome back to <span className="highlight">Edu<span id="t">T</span>era</span>
+                  </h1>
+                  <h2 className="welcome-subtitle">Smart Learning,Bright Minds</h2>
+                  <p className="welcome-description">
+                  An AI-powered education platform that uses adaptive learning, 
+                  gamified content, and collaborative projects to
+                  create personalized and effective learning experiences.
+                  </p>
+              </div>
+
+              <div className="main-img">
+                  <div className="main-img-container">
+                    <div className="line">
+                  </div>
+                  <div className="block">
+                  </div>
+                  <img src={images[currentImageIndex]} alt="main-img" className='hero-img'/>
+                  </div>
+              </div>
             </div>
-            <div className="main-img">
-            <div className="line">
-            </div>
-            <div className="block">
-            </div>
-            <img src={images[currentImageIndex]} alt="main-img" className='hero-img'/>
-        </div>
-        </div>
-    </section>
+        </section>
+    </div>
   );
 };
 export default HeroSection;;
