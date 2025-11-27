@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color:#0C7288;
+    --secondary-color: #68AAB6;
+    --background:white;
+    --text:#959595;
+}
+
+body {
+    background-color: var(--background);
+}
+
+/* ======================= Hero Section ====================== */
+
+.hero-container {
+    width: 95%;
+    margin: auto;
+
+}
+
+.main-section {
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* ======================= Left Content ====================== */
+
+.main-content {
+    width: 60%;
+}
+
+.welcome-title {
+    font-size: 40px;
+    color: var(--secondary-color);
+    line-height: 1.1;
+}
+
+.welcome-title span {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#welcome-title #t {
+    color: var(--secondary-color);
+}
+
+.main-content h2 {
+    color: var(--primary-color);
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.main-content p {
+    color: var(--text);
+    font-size: 20px;
+    width: 90%;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+/* ======================= Image + Shapes ====================== */
+
+.main-img {
+    padding: 20px;
+    margin: 20px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-img-container {
+    position: relative;
+    width: 500px;
+    height: 450px;
+    /* margin: 20px; */
+
+}
+
+.hero-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-48%, -45.8%) ;
+     object-position: center 48%;
+    border-radius: 18px;
+    z-index: 2;
+}
+
+.line {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    border: 2px solid var(--secondary-color);
+    background: white;
+    rotate: 45deg;
+    top: 10px;
+    left: 10px;
+    border-radius: 18px;
+    z-index: 0;
+}
+
+.block {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    background: var(--secondary-color);
+    border-radius: 18px;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
