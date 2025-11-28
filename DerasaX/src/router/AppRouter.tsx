@@ -2,6 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/Home/HomePage";
 import RequestDemoPage from "../pages/RequestDemo/RequestDemoPage"
 import SignIn from "../pages/SignIn/SignIn";
+import Events from "../pages/Events/Events"
+import Activities from "../pages/Activities/Activities"
+import News from "../pages/News/News"
+
 
 export default function AppRouter() {
   return (
@@ -9,6 +13,10 @@ export default function AppRouter() {
       <Route path="/" element={<HomePage />} />
       <Route path="/RequestDemoPage" element={<RequestDemoPage />} />
       <Route path="/SignIn" element={<SignIn/>} />
+      <Route path="/Events" element={<Events/>} />
+      <Route path="/Activities" element={<Activities/>} />
+      <Route path="/News" element={<News/>} />
+
     </Routes>
   );
 }
