@@ -21,7 +21,7 @@ body {
 .hero-container {
     width: 95%;
     margin: auto;
-
+    overflow: hidden;
 }
 
 .main-section {
