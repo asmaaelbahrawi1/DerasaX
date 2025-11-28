@@ -71,7 +71,6 @@ export default function SignIn() {
 
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form submitted successfully!", values);
-      // إرسال البيانات للسيرفر
     }
   };
 

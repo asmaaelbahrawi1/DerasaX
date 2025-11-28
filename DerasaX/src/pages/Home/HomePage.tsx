@@ -5,6 +5,7 @@ import FaqButton from "../../components/FAQ/FAQButton"
 
 
 import HeroSection from './HomePageSections/HeroSection/HeroSection'
+import Partnership from './HomePageSections/Partnership Section/Partnership'
 
 
 
@@ -13,6 +14,7 @@ export default function HomePage() {
   return <div>
             <NavBar />
             <HeroSection />
+            <Partnership />
             <FaqButton />
       
             
