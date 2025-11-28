@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Product.css'
-// import video from '../../../assets/videos/product-video.mp4'
+import video from '../../../assets/videos/product-video.mp4'
 
 const OtherFeatures = () => {
   return (
@@ -10,7 +10,7 @@ const OtherFeatures = () => {
       {/* Left Video Box */}
       <div className="video-box">
         <video 
-          src=""
+          src={video}
           autoPlay 
           loop 
           muted 
