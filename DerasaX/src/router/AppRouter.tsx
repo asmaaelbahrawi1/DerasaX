@@ -5,6 +5,7 @@ import SignIn from "../pages/SignIn/SignIn";
 import Events from "../pages/Events/Events"
 import Activities from "../pages/Activities/Activities"
 import News from "../pages/News/News"
+// import ThreeCards from '../pages/Home/HomePageSections/ThreeCardsSection/threecards';
 
 
 export default function AppRouter() {

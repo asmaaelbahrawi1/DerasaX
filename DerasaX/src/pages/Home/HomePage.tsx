@@ -6,6 +6,9 @@ import FaqButton from "../../components/FAQ/FAQButton"
 
 import HeroSection from './HomePageSections/HeroSection/HeroSection'
 
+import ThreeCards from './HomePageSections/ThreeCardsSection/threecards'
+
+
 
 
 
@@ -14,6 +17,8 @@ export default function HomePage() {
             <NavBar />
             <HeroSection />
             <FaqButton />
+            <ThreeCards/>
+            
       
             
              <Footer />
