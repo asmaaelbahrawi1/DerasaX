@@ -6,6 +6,7 @@ import FaqButton from "../../components/FAQ/FAQButton"
 
 import HeroSection from './HomePageSections/HeroSection/HeroSection'
 import Partnership from './HomePageSections/Partnership Section/Partnership'
+import ThreeCards from './HomePageSections/ThreeCardsSection/threecards'
 
 
 
@@ -16,6 +17,8 @@ export default function HomePage() {
             <HeroSection />
             <Partnership />
             <FaqButton />
+            <ThreeCards/>
+            
       
             
              <Footer />
