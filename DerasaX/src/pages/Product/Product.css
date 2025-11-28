@@ -1,0 +1,178 @@
+/* FeaturesHero */
+.our-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 0;
+    margin: 0 40px 0 50px;
+}
+
+.feature-container h1 {
+    font-size: 36px;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.feature-container h6 {
+    font-size: 20px;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.feature-container p {
+    font-size: 16px;
+    color: var(--color-paragraph);
+    line-height: 1.5;
+}
+
+/* End FeaturesHero */
+
+/* start Product Features  */
+.pf-container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.pf-container h1 {
+    color: var(--color-primary);
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.pf-container h3 {
+    color: var(--color-secondary);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+.pf-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+.pf-card {
+    background: #fff;
+    padding: 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 250px;
+    margin: auto;
+}
+
+.pf-icon-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to top , var(--color-primary) , var(--color-secondary) );
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.pf-icon-circle img {
+    width: 40px;
+    height: 40px;
+}
+.pf-card h4 {
+    color: var(--color-secondary);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pf-card p {
+    font-size: 13px;
+    color: var(--color-paragraph);
+    line-height: 1.6;
+    text-align: center;
+}
+/* end Product Features   */
+
+/* start other product */
+.features-container {
+  display: flex;
+  align-items: center;
+  gap: 280px;
+  padding: 40px;
+  overflow: hidden;
+}
+
+/* ------------------ Left Video Box ------------------- */
+
+.video-box {
+  width: 460px;
+  height: 260px;
+  background: linear-gradient(90deg, #00e0e0, #00d0ff);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 16px rgba(0, 196, 196, 0.3);
+  margin-left: 30px;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ------------------- Right Box ------------------------ */
+
+.features-card {
+  width: 460px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 196, 196, 0.25);
+  border: 1px solid #e6f7f7;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #008ea9;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 14px;
+  position: relative;
+  padding-left: 26px;
+}
+
+/* Check icon */
+.features-list li::before {
+  content: "✔";
+  color: #00b6c9;
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* end other product */
