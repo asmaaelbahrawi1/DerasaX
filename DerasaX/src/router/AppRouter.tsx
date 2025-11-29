@@ -8,6 +8,7 @@ import Activities from "../pages/Activities/Activities";
 import News from "../pages/News/News";
 
 import Product from "../pages/Product/Product";
+import AboutPage from "../pages/About/AboutPage";
 
 export default function AppRouter() {
   return (
@@ -21,6 +22,7 @@ export default function AppRouter() {
       <Route path="/News" element={<News />} />
 
       <Route path="/product" element={<Product />} />
+      <Route path="/AboutPage" element={<AboutPage />} />
     </Routes>
   );
 }

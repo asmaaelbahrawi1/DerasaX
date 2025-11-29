@@ -23,8 +23,8 @@ export default function HomePage() {
             
       
             
-             <Footer />
+            <Footer />
 
-         </div>
+        </div>
     
 }
