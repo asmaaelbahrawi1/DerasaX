@@ -8,6 +8,9 @@ import HeroSection from './HomePageSections/HeroSection/HeroSection'
 import Partnership from './HomePageSections/Partnership Section/Partnership'
 import ThreeCards from './HomePageSections/ThreeCardsSection/threecards'
 
+import ThreeCards from './HomePageSections/ThreeCardsSection/threecards'
+
+
 
 
 
