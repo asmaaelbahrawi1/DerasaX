@@ -1,4 +1,7 @@
 import './threecards.css';
+import '../../../../styles/global.css'
+import '../../../../styles/theme.css'
+
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import modalVedio from '../../../../assets/videos/Inspiring_Connecting_Empowering_Experiences_Video.mp4' 
@@ -120,9 +123,7 @@ const ThreeCards = () => {
                     <p className="key-points-title">Key points</p>
                     <div className="key-points-container">
                       {selectedCard.keyPoints.map((point, index) => (
-                        <span key={index} className="key-point-tag">
-                          {point}
-                        </span>
+                        <span key={index} className="key-point-tag">{point}</span>
                       ))}
                     </div>
                   </>
@@ -132,7 +133,11 @@ const ThreeCards = () => {
                   {/* Previous */}
                   {selectedCard.id > 1 && (
                     <button className="nav-btn prev-btn" onClick={goToPreviousCard}>
-                      Previous
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M6.27027 5L10 1.16667L8.86487 0L4 5L8.86487 10L10 8.83333L6.27027 5Z" fill="#0C7288"/>
+                            <path d="M2.27027 5L6 1.16667L4.86487 0L0 5L4.86487 10L6 8.83333L2.27027 5Z" fill="#0C7288"/>
+                        </svg>
+                            Back
                     </button>
                   )}
                   <button 
@@ -144,7 +149,14 @@ const ThreeCards = () => {
                   {/*  Next */}
                   {selectedCard.id < cards.length && (
                     <button className="nav-btn next-btn" onClick={goToNextCard}>
-                      Next »
+                        Next
+                       <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                          <path d="M3.72973 5L0 1.16667L1.13513 0L6 5L1.13513 10L0 8.83333L3.72973 5Z" fill="#0C7288"/>
+                       </svg>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                          <path d="M3.72973 5L0 1.16667L1.13513 0L6 5L1.13513 10L0 8.83333L3.72973 5Z" fill="#0C7288"/>
+                       </svg>
+                      
                     </button>
                   )}
                 </div>

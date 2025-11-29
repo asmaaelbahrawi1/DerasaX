@@ -118,29 +118,29 @@
 }
 
 .modal-text-col h2 {
-  font-size: 2.2em;
-  color: #333;
-  margin-bottom: 8px;
+  font-size: 2rem;
+  color: var(--color-primary);
   font-weight: 700;
 }
 
 .modal-subtitle {
-  font-size: 1.1em;
-  color: #666;
+  color: var(--color-secondary);
   margin-bottom: 20px;
 }
 
+
 .modal-full-description {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #555;
+    margin-bottom: 3rem;
 }
 
 .key-points-title {
   font-weight: bold;
-  color: #444;
-  margin-bottom: 10px;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
 }
 
 .key-points-container {
@@ -151,8 +151,9 @@
 }
 
 .key-point-tag {
-  background-color: #e0f2f7; 
-  color: #0288d1; 
+  box-shadow: 3px 3px 12px 0px #00000040;
+  background: linear-gradient(to bottom, #1a8195f5, #3cb2cc);
+  color: #fff; 
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 0.9em;
@@ -163,49 +164,65 @@
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  margin-top: auto; 
+  margin-top: 4rem; 
 }
 
 .nav-btn, .explore-btn {
   padding: 12px 25px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  padding: 1rem 4rem;
   cursor: pointer;
   font-size: 1em;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.prev-btn {
-  background-color: #f0f0f0;
-  color: #555;
+.prev-btn , .next-btn{
+  background-color: transparent;
+  color: var(--color-primary);
+  font-family: "Segoe UI";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; 
 }
 
 .prev-btn:hover {
-  background-color: #e0e0e0;
-  transform: translateY(-2px);
+  /* background-color: #e0e0e0;
+  transform: translateY(-2px); */
 }
 
 .explore-btn {
-  background-color: #2563eb; 
-  color: white;
+  background: linear-gradient(to bottom, #1a8195f5, #3cb2cc);
+  color: #fff;
+  border-radius: 20px;
+
 }
 
 .explore-btn:hover {
   background-color: #1a4da3;
   transform: translateY(-2px);
 }
-
-.next-btn {
-  background-color: #f0f0f0; 
-  color: #2563eb; 
+.next-btn svg{
+    width: 6px;
+height: 10px;
+aspect-ratio: 3/5;
 }
-
+.prev-btn svg{
+    width: 10px;
+height: 10px;
+display: inline;
+}
 .next-btn:hover {
-  background-color: #e0e0e0;
-  transform: translateY(-2px);
+  /* background-color: #e0e0e0;
+  transform: translateY(-2px); */
 }
-
+.nav-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .close-modal-btn {
     position: absolute;
     top: 15px;
