@@ -14,8 +14,8 @@ export default function HomePage() {
             <HeroSection />
             <FaqButton />
             
-             <Footer />
+            <Footer />
 
-         </div>
+        </div>
     
 }
