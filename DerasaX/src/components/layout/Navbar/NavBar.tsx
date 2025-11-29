@@ -3,10 +3,14 @@ import Logo from '../../../assets/images/logo-img.png'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 
-const NavBar = () => {
+
+interface NavBarProps {
+  className?: string;
+} 
+const NavBar: React.FC<NavBarProps> = ({ className }) => {
   return (
-    <div className="container">
-      <nav className="nav">
+    <div className="container" >
+      <nav className={className ? className : "navbar-default"}>
       <div className="nav-left">
         <img src={Logo}  alt="EduTera Logo" className="logo-image" />
         <div className="logo-text">
@@ -22,7 +26,7 @@ const NavBar = () => {
       </div>
 
       <div className="nav-buttons">
-        <Link to="/demo">
+        <Link to="/RequestDemoPage">
             <button className="btn-demo">Request a demo</button>
         </Link>
         <Link to="/signin">
