@@ -1,17 +1,33 @@
 @import './../../../styles/theme.css';
-.container{
+
+.container {
     width: 95%;
     margin: auto;
     padding: 20px;
 }
+
 .navbar-about {
-  background-color: #ffffffa3;
+    background-color: #ffffffa3;
 }
-.navbar-default{
+
+.navbar-default {
     background-color: #FFF;
 
 }
-.navbar-default , .navbar-about {
+
+.navbar-product {
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-main);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 15px;
+    margin:0;
+}
+
+.navbar-default,
+.navbar-about , .navbar-product {
     padding: 20px 35px;
     display: flex;
     align-items: center;
@@ -20,7 +36,7 @@
     /* box-shadow:  0 0 10px rgba(0, 0, 0, 0.1); */
     box-shadow: 0px 4px 4px 0px #00000040;
 
-  border-radius: 15px;
+    border-radius: 15px;
 
     /* margin: 20px; */
 }
@@ -46,30 +62,38 @@
     font-size: 20px;
     font-weight: bold;
 }
+
 .subtitle {
     color: #68AAB6;
     font-size: 12px;
 }
+
 .nav-links {
     display: flex;
     gap: 30px;
     font-size: 16px;
 }
-.nav-links a {
+
+.nav-links a,
+.nav-links .link-nav {
     text-decoration: none;
     color: #0F6774;
     font-weight: 400;
     transition: 0.2s;
 }
-.nav-links a:hover {
+
+.nav-links a:hover,
+.nav-links .link-nav:hover {
     color: #68AAB6;
     font-weight: 500;
     transform: scale(1.1);
 }
+
 .nav-buttons {
     display: flex;
     gap: 15px;
 }
+
 button {
     padding: 8px 20px;
     border-radius: 25px;
@@ -79,11 +103,15 @@ button {
     transition: 0.2s;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
-.btn-demo , .btn-signin {
+
+.btn-demo,
+.btn-signin {
     background: linear-gradient(to bottom, #0C7288, #68AAB6);
     color: white;
 }
-.btn-demo:hover , .btn-signin:hover {
+
+.btn-demo:hover,
+.btn-signin:hover {
     background: linear-gradient(to bottom, #0A595F, #4E8A91);
     transition: all .2s ease-in-out;
 }

@@ -5,7 +5,7 @@ import school2 from "../../../../assets/images/school-2.png";
 import school1 from "../../../../assets/images/school-1.png";
 import school3 from "../../../../assets/images/school-3.jpg";
 import school4 from "../../../../assets/images/school-4.jpg";
-import Logo from "../../../../assets/images/Logo-partner.png";
+import Logo from "../../../../assets/images/Drasa-ph.jpg";
 import icon from "../../../../assets/images/animate-partner.gif";
 
 
