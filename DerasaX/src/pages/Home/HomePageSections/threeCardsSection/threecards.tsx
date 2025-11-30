@@ -97,17 +97,12 @@ const ThreeCards = () => {
 
       {selectedCard && (
         <div className="modal-overlay" onClick={() => setSelectedCard(null)}>
-          <div className="modal-box-new" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-box-new modal-center-popup" onClick={(e) => e.stopPropagation()}>
             <div className="modal-content-wrapper">
               <div className="modal-image-col">
-                <iframe 
-                  className="modal-video-new"
-                  src={selectedCard.videoUrl} 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                  title={selectedCard.title}
-                ></iframe>
+                <video  className="modal-video-new" src={selectedCard.videoUrl}  controls={false}  autoPlay  loop muted  >
+                  
+                </video>
               </div>
               
               <div className="modal-text-col">
@@ -129,30 +124,40 @@ const ThreeCards = () => {
                 )}
 
                 <div className="modal-actions">
-                  {/* Previous */}
                   {selectedCard.id > 1 && (
+                    // back
                     <button className="nav-btn prev-btn" onClick={goToPreviousCard}>
-                      Previous
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                          <path d="M2.27027 5L6 1.16667L4.86487 0L0 5L4.86487 10L6 8.83333L2.27027 5Z" fill="#0C7288"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                          <path d="M2.27027 5L6 1.16667L4.86487 0L0 5L4.86487 10L6 8.83333L2.27027 5Z" fill="#0C7288"/>
+                        </svg>
+                      Back
                     </button>
                   )}
-                  <button 
-                    className="explore-btn"
-                    onClick={() => handleExploreClick(selectedCard.path)} // 👈 تمرير المسار
-                  >
+                  {/* explore */}
+                  <button className="explore-btn" onClick={() => handleExploreClick(selectedCard.path)} >
                     Explore more
                   </button>
                   {/*  Next */}
                   {selectedCard.id < cards.length && (
                     <button className="nav-btn next-btn" onClick={goToNextCard}>
-                      Next »
+                      Next  
+                      <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                         <path d="M3.72973 5L0 1.16667L1.13513 0L6 5L1.13513 10L0 8.83333L3.72973 5Z" fill="#0C7288"/>
+                      </svg>
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                        <path d="M3.72973 5L0 1.16667L1.13513 0L6 5L1.13513 10L0 8.83333L3.72973 5Z" fill="#0C7288"/>
+                      </svg>
+
                     </button>
                   )}
                 </div>
               </div>
             </div>
-            <button className="close-modal-btn" onClick={() => setSelectedCard(null)}>
-              &times;
-            </button>
+            
           </div>
         </div>
       )}
