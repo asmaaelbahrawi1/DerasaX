@@ -1,5 +1,6 @@
 // import React from 'react'
-import Logo from '../../../assets/images/logo-img.png'
+import React, { useState, useEffect } from 'react';
+import Logo from '../../../assets/images/nav-logo.png'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 
@@ -8,17 +9,34 @@ interface NavBarProps {
 } 
 
 const NavBar: React.FC<NavBarProps> = ({ className }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    //check if user scroll
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]); 
+  const initialClass = className ? className : "navbar-default";
+
+  // const baseClass = className ? className : "navbar-default";
+  const finalClass = scrolled ? "navbar-scrolled" : initialClass;
+
   return (
     <div className="container">
-      <nav className={className ? className : "navbar-default"}>
+      <nav className={finalClass}>
         <div className="nav-left">
-          <img src={Logo} alt="EduTera Logo" className="logo-image" />
-          <div className="logo-text">
-            <h1 className="title">
-              Edu<span style={{ color: "#68AAB6" }}>T</span>era
-            </h1>
-            <span className="subtitle">Smart Learning. Bright Minds.</span>
-          </div>
+          <img src={Logo} alt="DerasaX Logo" className="logo-image" />
+        
         </div>
 
         <div className="nav-links">

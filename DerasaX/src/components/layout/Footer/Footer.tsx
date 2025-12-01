@@ -1,6 +1,7 @@
 import './Footer.css'
 import '../../../styles/theme.css'
-import logo from '../../../assets/images/Drasa-Logo-nf.png'
+// import logo from '../../../assets/images/Drasa-Logo-nf.png'
+import logo from '../../../assets/images/nav-logo.png'
 import instgram from '../../../assets/icons/instgram.svg'
 import linkedin from '../../../assets/icons/linkedin.svg'
 import facebook from '../../../assets/icons/facebook.svg'
