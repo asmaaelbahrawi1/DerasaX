@@ -1,6 +1,6 @@
 import './Footer.css'
 import '../../../styles/theme.css'
-import logo from '../../../assets/images/logo-img.png'
+import logo from '../../../assets/images/nav-logo.png'
 import instgram from '../../../assets/icons/instgram.svg'
 import linkedin from '../../../assets/icons/linkedin.svg'
 import facebook from '../../../assets/icons/facebook.svg'
@@ -22,7 +22,7 @@ const Footer = () => {
         <div className="footer-left">
           <div className="logo">
             <img src={logo} alt="" className='logo-img' />
-            <h2 className='logo-name'>EduTera</h2>
+            {/* <h2 className='logo-name'>EduTera</h2> */}
           </div>
           <p className="email">EduTera@gmail.com</p>
           <p className="phone">+20 123 4567 890</p>
