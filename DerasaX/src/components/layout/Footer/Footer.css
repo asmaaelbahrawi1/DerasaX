@@ -18,6 +18,10 @@
     display: flex;
     gap: 1rem;
 }
+/* .logo-img{
+    width:200px;
+    height:200px;
+} */
 .logo-name{
     font-weight: 700;
     font-size: 30px;

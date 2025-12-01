@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import "../Product.css";
 import icon1 from '../../../assets/icons/icon-product-1.png'
 import icon2 from '../../../assets/icons/icon-product-2.png'
@@ -6,9 +7,27 @@ import icon3 from '../../../assets/icons/icon-product-3.png'
 import icon4 from '../../../assets/icons/icon-product-4.png'
 
 const ProductFeatures = () => {
+    useEffect(() => {
+      const cards = document.querySelectorAll(".reveal-repeat");
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show-repeat");
+            } else {
+              entry.target.classList.remove("show-repeat");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+  
+      cards.forEach((card) => observer.observe(card));
+    }, []);
   return (
     <>
-      <section className="pf-container">
+      <section className="pf-container reveal-repeat">
         <h1>Product Features</h1>
         <h3>
           Discover the key features that make EduTera

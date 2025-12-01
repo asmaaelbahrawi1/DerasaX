@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Partnership.css";
 import handVideo from "../../../../assets/videos/hand-video.mp4";
 import school2 from "../../../../assets/images/school-2.png";
@@ -8,21 +8,29 @@ import school4 from "../../../../assets/images/school-4.jpg";
 import Logo from "../../../../assets/images/Drasa-ph.jpg";
 import icon from "../../../../assets/images/animate-partner.gif";
 
-
 export default function Partnership() {
-  const rightImages = [
-    school1,
-    school2,
-    school3,
-    school4
-  ];
-
-  const topIcons = [
-    icon
-  ];
+  const rightImages = [school1, school2, school3, school4];
+  const topIcons = [icon];
 
   const [currentImg, setCurrentImg] = useState(0);
   const [currentIcon, setCurrentIcon] = useState(0);
+
+  // NEW 👇
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setInView(true);
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const interval1 = setInterval(() => {
@@ -41,40 +49,31 @@ export default function Partnership() {
 
   return (
     <>
-    <div className="partner-container">
-            <img
-        src={topIcons[currentIcon]}
-        className="top-icon"
-        alt="top icon"
-      />
+      <div
+        ref={sectionRef}
+        className={`partner-container scroll-animate ${inView ? "show" : ""}`}
+      >
+        <img src={topIcons[currentIcon]} className="top-icon" alt="top icon" />
 
-      <h2 className="title">Our Partnership With <span style={{color:"#68AAB6"}}>.</span></h2>
+        <h2 className="title">
+          Our Partnership With <span style={{ color: "#68AAB6" }}>.</span>
+        </h2>
 
-      <div className="logos-wrapper">
-        <img
-          src={Logo}
-          className="left-logo"
-          alt="left logo"
-        />
+        <div className="logos-wrapper">
+          <img src={Logo} className="left-logo" alt="left logo" />
 
-        <video
-          className="handshake-video"
-          autoPlay
-          loop
-          muted
-          src={handVideo}
-        />
+          <video className="handshake-video" autoPlay loop muted src={handVideo} />
 
-        {/* Rotating right logos */}
-        <img
-          key={rightImages[currentImg]}
-          src={rightImages[currentImg]}
-          className="right-logo fade-img"
-          alt="right logo"
-        />
+          <img
+            key={rightImages[currentImg]}
+            src={rightImages[currentImg]}
+            className="right-logo fade-img"
+            alt="right logo"
+          />
+        </div>
       </div>
-    </div>
-     <div className="partner-content">
+
+      <div className={`partner-content scroll-animate ${inView ? "show" : ""}`}>
         <h1>We’re proud to collaborate with these schools to build a smarter,
             more supportive learning environment for every student. Together,
             we empower children to grow with confidence through interactive learning,
@@ -82,6 +81,6 @@ export default function Partnership() {
             This partnership reflects our shared belief that education works
             best when school and home stay connected.</h1>
       </div>
-      </>
+    </>
   );
 }

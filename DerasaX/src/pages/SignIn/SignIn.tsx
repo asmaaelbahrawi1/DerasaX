@@ -145,7 +145,7 @@ export default function SignIn() {
           </button>
 
           <p className="text">
-            Do you want a demo? <a href="#">Request now</a>
+            Do you want a demo? <Link to="/RequestDemoPage">Request now</Link>
           </p>
         </form>
       </div>

@@ -25,7 +25,7 @@ const NavBar: React.FC<NavBarProps> = ({ className }) => {
           <Link to="/" className="link-nav">Home</Link>
           <Link to="/AboutPage" className="link-nav">About</Link>
           <Link to="/product" className="link-nav">Our Product</Link>
-          <Link to="/community" className="link-nav">Community</Link>
+          <Link to="/Activities" className="link-nav">Community</Link>
         </div>
 
         <div className="nav-buttons">

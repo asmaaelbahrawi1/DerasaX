@@ -1,4 +1,5 @@
 import './Features.css';
+import { useEffect } from "react";
 import teacherDashboard from '../../../../assets/videos/main-vid1.mp4';
 import studentKPIs from '../../../../assets/videos/main-vid2.mp4';
 import attendanceTracking from '../../../../assets/videos/main-vid3.mp4';
@@ -9,10 +10,28 @@ import calendarIcon from '../../../../assets/images/gif-3.gif';
 import graduationIcon from '../../../../assets/images/gif-4.gif';
 
 export default function Features() {
+
+  useEffect(() => {
+    const cards = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+  }, []);
+
   return (
     <section className="features-section">
      
-      <div className="feature-card feature-left">
+      <div className="feature-card feature-left reveal">
         <div className="feature-icon">
           <img src={notebookIcon} alt="Notebook icon" />
         </div>
@@ -31,7 +50,7 @@ export default function Features() {
       </div>
 
      
-      <div className="feature-card feature-right">
+      <div className="feature-card feature-right reveal">
         <div className="feature-image">
           <video autoPlay loop muted playsInline>
             <source src={studentKPIs} type="video/mp4" />
@@ -50,7 +69,7 @@ export default function Features() {
       </div>
 
      
-      <div className="feature-card feature-left">
+      <div className="feature-card feature-left reveal">
         <div className="feature-icon">
           <img src={calendarIcon} alt="Calendar icon" />
         </div>
@@ -69,7 +88,7 @@ export default function Features() {
       </div>
 
      
-      <div className="feature-card feature-right">
+      <div className="feature-card feature-right reveal">
         <div className="feature-image">
           <video autoPlay loop muted playsInline>
             <source src={authentication} type="video/mp4" />

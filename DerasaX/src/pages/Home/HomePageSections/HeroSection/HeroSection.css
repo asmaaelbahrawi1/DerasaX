@@ -60,9 +60,6 @@ body {
 #welcome-title #t {
     color: var(--secondary-color);
 }
-.main-content .welcome-title  #h {
-    color: var(--secondary-color);
-}
 
 .main-content h2 {
     color: var(--primary-color);
@@ -78,9 +75,7 @@ body {
     margin-top: 15px;
     line-height: 1.6;
 }
-.about-button{
-    display: none !important;
-}
+
 /* ======================= Image + Shapes ====================== */
 
 .main-img {
@@ -107,7 +102,7 @@ body {
     height: 100%;
     object-fit: cover;
     transform: translate(-48%, -45.8%) ;
-    object-position: center 48%;
+     object-position: center 48%;
     border-radius: 18px;
     z-index: 2;
 }
@@ -134,4 +129,42 @@ body {
     top: 10px;
     left: 10px;
     z-index: 1;
+}
+/* ====================== Scroll Animation ====================== */
+
+.scroll-show {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .9s ease;
+}
+
+.scroll-show.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade Up for text */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: all 1s ease;
+}
+
+.scroll-show.active .fade-up-element {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .2s;
+}
+
+/* Fade Right for image */
+.fade-right-element {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s ease;
+}
+
+.scroll-show.active .fade-right-element {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: .4s;
 }
