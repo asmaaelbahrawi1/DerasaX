@@ -5,7 +5,7 @@ import school2 from "../../../../assets/images/school-2.png";
 import school1 from "../../../../assets/images/school-1.png";
 import school3 from "../../../../assets/images/school-3.jpg";
 import school4 from "../../../../assets/images/school-4.jpg";
-import Logo from "../../../../assets/images/Drasa-ph.jpg";
+import Logo from "../../../../assets/images/partner-logo.png";
 import icon from "../../../../assets/images/animate-partner.gif";
 
 export default function Partnership() {
@@ -14,8 +14,6 @@ export default function Partnership() {
 
   const [currentImg, setCurrentImg] = useState(0);
   const [currentIcon, setCurrentIcon] = useState(0);
-
-  // NEW 👇
   const sectionRef = useRef(null);
   const [inView, setInView] = useState(false);
 
@@ -47,6 +45,36 @@ export default function Partnership() {
     };
   }, []);
 
+const text = ".Great Schools";
+  const [displayed, setDisplayed] = useState("");
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const typingSpeed = isDeleting ? 50 : 120; 
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayed(text.slice(0, index + 1));
+        setIndex((i) => i + 1);
+
+        if (index + 1 === text.length) {
+          setTimeout(() => setIsDeleting(true), 800); 
+        }
+      } else {
+        setDisplayed(text.slice(0, index - 1));
+        setIndex((i) => i - 1);
+
+        if (index - 1 === 0) {
+          setIsDeleting(false);
+        }
+      }
+    }, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [index, isDeleting]);
+
+
   return (
     <>
       <div
@@ -56,7 +84,8 @@ export default function Partnership() {
         <img src={topIcons[currentIcon]} className="top-icon" alt="top icon" />
 
         <h2 className="title">
-          Our Partnership With <span style={{ color: "#68AAB6" }}>.</span>
+          Our Partnership With <span style={{ color: "#68AAB6" , transition: "opacity 0.5s"}}>.      {displayed}
+</span>
         </h2>
 
         <div className="logos-wrapper">
