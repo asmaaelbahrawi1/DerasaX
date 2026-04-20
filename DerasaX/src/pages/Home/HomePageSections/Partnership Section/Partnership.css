@@ -1,3 +1,6 @@
+.hole{
+    background-color: #FFFFFF;
+}
 .partner-container {
     width: 1205.8187255859375px;
     margin: 30px 60px;
@@ -89,7 +92,8 @@
 
 .partner-content {
     width: 85%;
-    margin: 40px 0px 30px 90px;
+    margin: 40px 0px 0px 90px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;

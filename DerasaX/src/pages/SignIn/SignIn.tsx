@@ -148,7 +148,10 @@ export default function SignIn() {
             Do you want a demo? <Link to="/RequestDemoPage">Request now</Link>
           </p>
         </form>
-      </div>
+        
+
+      </div>   
+            <Link to="/dashboard">Go to Dashboard</Link>
     </div>
   );
 }
