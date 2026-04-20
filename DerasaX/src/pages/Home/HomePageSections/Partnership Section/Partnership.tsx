@@ -77,6 +77,7 @@ const text = ".Great Schools";
 
   return (
     <>
+    <div className="hole">
       <div
         ref={sectionRef}
         className={`partner-container scroll-animate ${inView ? "show" : ""}`}
@@ -109,6 +110,7 @@ const text = ".Great Schools";
             transparent communication, and the right tools for success.
             This partnership reflects our shared belief that education works
             best when school and home stay connected.</h1>
+      </div>
       </div>
     </>
   );

@@ -3,7 +3,8 @@
   justify-content: center;
   gap: 0px;
   padding: 40px;
-  margin-top: 20px;
+  margin-top: 0px;
+  background-color: #FFFFFF;
 }
 .card {
   width: 250px;
