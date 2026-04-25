@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7f9;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #f0f2f4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 15px 20px;
+  border-radius: 15px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+.brand {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.nav-center {
+  font-size: 23px;
+  font-weight: 600;
+  color: #00a8a8;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bell {
+  position: relative;
+  font-size: 18px;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.menu-btn {
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.person-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+}
+.person-data h1{
+  color: #0C7288;
+  font-size: 25px;
+  width: 100%;
+}
+.person-data p{
+  color: #959595;
+}
+.person-img{
+  width: 60%;
+  height: 100%;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer {
+  width: min(820px, 92%);  /* 👈 أوسع + responsive */
+  max-height: 99vh;        /* 👈 الطول ثابت نسبيًا */
+  overflow-y: auto;        /* 👈 لو المحتوى زاد يعمل scroll */
+
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+
+  transform: scale(0.85);
+  opacity: 0;
+  transition: 0.3s ease;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+.overlay.show .drawer {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* menu list */
+.drawer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.drawer li {
+  margin-bottom: 10px;
+}
+
+/* Link styling (important fix) */
+.drawer a {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  background: #f5f7f9;
+  transition: 0.2s;
+}
+
+.drawer a:hover {
+  background: #e6f7f7;
+  color: #1a7e7e;
+}
+
+/* close button */
+.close {
+  display: block;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+}

@@ -71,7 +71,6 @@ export default function SignIn() {
 
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form submitted successfully!", values);
-      // إرسال البيانات للسيرفر
     }
   };
 
@@ -146,10 +145,13 @@ export default function SignIn() {
           </button>
 
           <p className="text">
-            Do you want a demo? <a href="#">Request now</a>
+            Do you want a demo? <Link to="/RequestDemoPage">Request now</Link>
           </p>
         </form>
-      </div>
+        
+
+      </div>   
+            <Link to="/dashboard">Go to Dashboard</Link>
     </div>
   );
 }

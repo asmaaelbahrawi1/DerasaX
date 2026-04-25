@@ -1,0 +1,416 @@
+.profile-container {
+    margin: 10px 60px;
+}
+
+.profile-title {
+    color: #0C7288;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+}
+
+.profile-subtitle {
+    color: #959595;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.container-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-button {
+    margin: 10px 60px;
+}
+
+.dashboard-button button,
+.reading-btn button,
+.btn-office-request button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    background-color:#0C7288;
+    transition: .7s ease-in-out;
+}
+
+.dashboard-button button:hover,
+.reading-btn button:hover,
+.btn-office-request button:hover {
+    background-color: #26acca;
+}
+
+/* Filter Box */
+.filter-box {
+    width: 1112px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    margin: 30px 120px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 1px solid #959595;
+}
+.filter-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+.filter-box h2 {
+    color: #0C7288;
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.filter-box p {
+    color:#959595;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 5px;
+    color: #0C7288;
+}
+
+.input-group input,
+.input-group select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.input-group input:focus,
+.input-group select:focus {
+    border: 1px solid #26acca;
+    box-shadow: 1px 2px 15px 1px;
+}
+.lessons-grid {
+  display: flex;
+  flex-wrap: wrap !important;
+  gap: 30px;
+  padding: 20px;
+  margin: 10px 60px;
+}
+
+.lesson-card {
+    width: 400px;
+  background: #F8FAFC;
+  border: 1px solid #F8FAFC;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: auto;
+  /* flex: 1; */
+}
+
+.lesson-image {
+  height: 160px;
+  /* background: url("../../../assets/images/lessons.png") center/cover; */
+  position: relative;
+}
+.lesson-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #0C7288;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.lesson-content {
+  padding: 15px;
+}
+
+.lesson-content h3 {
+  font-size: 20px;
+  line-height: 32px;
+  color: #0C7288;
+  margin-bottom: 8px;
+}
+
+.lesson-content p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #68AAB6;
+  margin-bottom: 12px;
+}
+
+.lesson-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #6b7280;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-bottom: 10px;
+}
+
+.lesson-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: #959595;
+  margin-bottom: 12px;
+}
+
+.lesson-tags span {
+  /* background: #f1f5f9; */
+  border: 1px solid #959595;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+.lesson-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-btn {
+  flex: 1;
+  background: #0C7288;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .8 ease-in-out;
+}
+.view-btn:hover,
+.edit-btn:hover{
+    background-color: #26acca;
+}
+
+.edit-btn {
+  background: #0C7288;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: white;
+  border: 1px solid #959595;
+  padding: 8px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 114, 136, 0.15); /* نفس لونك الأساسي بشكل خفيف */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+/* Popup Box */
+.modal {
+  width: 450px;
+  background: #F8FAFC; /* نفس الكارد */
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 25px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  animation: fadeScale 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Title */
+.modal h2 {
+  color: #0C7288;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Labels */
+.modal label {
+  color: #0C7288;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Inputs */
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Focus نفس الفيلتر */
+.modal input:focus,
+.modal textarea:focus,
+.modal select:focus {
+  border: 1px solid #26acca;
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Save button نفس view */
+.modal .save-btn {
+  flex: 1;
+  background: #0C7288;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal .save-btn:hover {
+  background: #26acca;
+}
+
+/* Cancel button نفس delete */
+.modal .cancel-btn {
+  flex: 1;
+  background: white;
+  border: 1px solid #959595;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal .cancel-btn:hover {
+  background: #f1f5f9;
+}
+
+.delete-modal p {
+  color: #959595;
+  margin: 10px 0;
+}
+
+.delete-confirm {
+  flex: 1;
+  background: #e11d48; /* أحمر لطيف */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-confirm:hover {
+  background: #be123c;
+}.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 500px;
+  background: #F8FAFC;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeScale 0.25s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal h2 {
+  color: #0C7288;
+  margin-bottom: 15px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.modal-overlay textarea{
+  height: 50%;
+}

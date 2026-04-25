@@ -1,0 +1,238 @@
+.dashboard-button{
+    margin: 30px 60px;
+}
+.dashboard-button button{
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 10px;
+    color: white;
+    background-color: #0C7288;
+    transition: .7s ease-in-out;
+}
+
+.dashboard-button button:hover{
+    background-color: #26acca;
+}
+.container-adding{
+    display: flex;
+    gap: 50px;
+    margin: 10px 0px;
+    justify-content: space-between;
+}
+.left-container-adding{
+    width: 60%;
+    display: flex;
+    margin: 15px 0;
+    flex-direction: column;
+}
+.top-left-card{
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 1px 8px rgb(131, 128, 128);
+    border-radius: 10px;
+}
+.info-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+h1{
+    color: #0C7288;
+    font-size: 24px;
+    line-height: 32px;
+}
+p{
+    color: #68AAB6;
+    font-size: 20px;
+    line-height: 32px;
+}
+.lesson-title{
+    display: flex;
+    flex-direction: column;
+}
+label{
+font-size: 20px;
+line-height: 32px;
+font-weight: 700;
+color: #0C7288;
+width: 100%;
+align-items: flex-start;
+}
+input , select {
+    border: 1px solid #959595;
+    border-radius: 5px;
+    padding: 8px 30px;
+    flex: 1;
+    width: 100%;
+    margin: 5px 0;
+}
+textarea{
+    border: 1px solid #959595;
+    border-radius: 5px;
+    padding: 10px 30px 40px 30px;
+    flex: 1;
+    width: 100%;
+    margin: 0px 0;
+    height: 555px;
+}
+input:focus , select:focus,textarea:focus{
+    border: none;
+    border: 1px solid #26acca;
+    box-shadow: 1px 2px 15px 1px #26acca;
+}
+select option  {
+    color: #0C7288;
+}
+select{
+    color: #959595;
+    padding: 5px 60px;
+    overflow: hidden;
+}
+.subject-grade{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.button-left-card{
+    background-color: #E6EBF0;
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 1px 8px rgb(131, 128, 128);
+    display: flex;
+    flex-direction: column;
+}
+.objectives{
+    display: flex;
+}
+.objectives div{
+    padding: 15px;
+    border-radius: 100%;
+    background-color: white;
+    color: #0C7288;
+    margin: 0 10px;
+}
+.right-container-adding{
+    display: flex;
+    flex-direction: column;
+}
+.first-card-right{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 1px 8px rgb(131, 128, 128);
+    margin: 15px 30px 15px 0;
+    justify-content: center;
+}
+.upload-btn{
+    border-radius: 10px;
+    padding: 10px 40px;
+    margin: 10px;
+    color: white;
+    background-color: #0C7288;
+    transition: .7s ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.upload-btn img{
+    padding: 0px 10px;
+}
+.upload-btn:hover{
+    background-color: #26acca;
+}
+.second-card-right{
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 1px 8px rgb(131, 128, 128);
+    margin: 15px 30px 15px 0;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* الصورة + العكس */
+.second-card-right::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../../../assets/images/requestdDemoBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform: scaleX(-1); /* عكس الصورة بس */
+
+    z-index: 0;
+}
+
+/* تغميق بسيط */
+.second-card-right::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.12); /* غمقان خفيف جدًا */
+    z-index: 1;
+}
+
+/* المحتوى يفضل طبيعي 100% */
+.second-card-right > *{
+    position: relative;
+    z-index: 2;
+}
+
+.second-card-right h2{
+    color: white;
+    margin: 10px;
+}
+.second-card-right p li{
+    color: white;
+}
+.third-card-right{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 1px 8px rgb(131, 128, 128);
+    margin: 15px 30px 15px 0;
+    padding: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-box{
+    background: white;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 2px 1px 8px rgb(131, 128, 128);
+    text-align: center;
+}
+
+.popup-box h2{
+    color: #0C7288;
+}
+@media screen and (max-width: 768px){
+    .container-adding{
+        flex-direction: column;
+    }
+    .left-container-adding{
+        width: 100%;
+    }
+}

@@ -130,3 +130,41 @@ body {
     left: 10px;
     z-index: 1;
 }
+/* ====================== Scroll Animation ====================== */
+
+.scroll-show {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .9s ease;
+}
+
+.scroll-show.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade Up for text */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: all 1s ease;
+}
+
+.scroll-show.active .fade-up-element {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .2s;
+}
+
+/* Fade Right for image */
+.fade-right-element {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s ease;
+}
+
+.scroll-show.active .fade-right-element {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: .4s;
+}

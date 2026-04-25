@@ -1,0 +1,144 @@
+.profile-container{
+    margin: 10px 60px;
+}
+.profile-title{
+    color: #0C7288;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+
+}
+.profile-subtitle{
+    color: #959595;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+#cont{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    background-color: transparent;
+    flex-direction: row !important;
+    box-shadow: 0 0 0 0 ;
+    position: relative;
+}
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.profile-card{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 427px;
+}
+.profile-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-card h3{
+    color: #0C7288;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 10px;
+}
+.profile-card label{
+    background-color: #0C7288;
+    color: white;
+    padding: 10px 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.subject-card{
+    background-color: #E6EBF0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+.subject-card h2{
+    color:#0C7288;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 10px;
+}
+.subjects{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.subjects p {
+    background-color: #0C7288;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.grades{
+    display: flex;
+    gap: 1px;
+    align-items: center;
+}
+.grades p{
+    background-color: white;
+    color: #0C7288;
+    padding: 5px ;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.right-container{
+    width:60%;
+    background-image: 
+    linear-gradient(to bottom, rgba(12, 114, 136, 0.8), rgba(12, 114, 136, 0)),
+    url(../../../assets/images/profile-bg.png);
+    background-size: cover;       
+    background-position: center; 
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;         
+}
+.info{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+#info{
+    width: 45%;
+}
+.right-container h3{
+    color: white;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.right-container p{
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: 20px;
+}

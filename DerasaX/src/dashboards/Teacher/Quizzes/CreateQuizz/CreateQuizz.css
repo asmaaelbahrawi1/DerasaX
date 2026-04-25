@@ -1,0 +1,274 @@
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 90px;
+}
+
+.profile-container {
+}
+#bb {
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    background-color: #0C7288;
+    transition: .7s ease-in-out;
+}
+
+#bb:hover {
+    background-color: #26acca;
+}
+
+.profile-title {
+  color: #0c7288;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.profile-subtitle {
+  color: #959595;
+  font-size: 16px;
+}
+
+.btn-saves button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+/* MAIN */
+.quiz-container {
+  display: flex;
+  gap: 30px;
+  margin: 20px 90px;
+}
+
+/* LEFT */
+.quiz-left {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+}
+.createe{
+  display: flex;
+  flex-direction: column;
+}
+.section-title {
+  color: #0c7288;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 700;
+  /* text-align: start; */
+}
+
+.section-subtitle {
+  color: #26acca;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: start;
+  margin-bottom: 15px;
+}
+
+.quiz-left label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.quiz-left input,
+.quiz-left select,
+.quiz-left textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.quiz-left textarea {
+  height: 100px;
+  resize: none;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row > div {
+  flex: 1;
+}
+
+.tip {
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+
+/* RIGHT */
+
+ /* RIGHT SIDE */
+.quiz-right {
+  width: 350px;
+}
+
+/* QUICK SETTINGS CARD */
+.quick-card {
+  background: #E6EBF0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.quick-card h3 {
+  color: #0c7288;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+/* ROW */
+.setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.setting-row .title {
+  color: #0c7288;
+  font-weight: 600;
+  margin: 0;
+  font-size: 15px;
+}
+
+.setting-row span {
+  font-size: 12px;
+  color: #6e6e6e;
+}
+
+/* SWITCH */
+.toggle-switch {
+  width: 46px;
+  height: 24px;
+  background: white;
+  border-radius: 20px;
+  position: relative;
+}
+
+.toggle-switch::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #0c7288;
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  border-radius: 50%;
+}
+
+/* ABOUT CARD */
+.about-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.about-card h3 {
+  color: #0c7288;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  text-align: center;
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-bottom: 15px;
+}
+
+/* BUTTONS */
+.about-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.add-btn {
+  background: #0c7288;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.ai-btn {
+  background: #0c7288;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+/* SWITCH ACTIVE */
+.toggle-switch {
+  width: 46px;
+  height: 24px;
+  background: #e6e6e6;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-switch::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #999;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+/* ACTIVE STATE */
+.toggle-switch.active {
+  background: #dff3f5;
+}
+
+.toggle-switch.active::after {
+  left: 24px;
+  background: #0c7288;
+}
+
+/* ERRORS */
+.error {
+  color: red;
+  font-size: 12px;
+}
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-box {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+}
