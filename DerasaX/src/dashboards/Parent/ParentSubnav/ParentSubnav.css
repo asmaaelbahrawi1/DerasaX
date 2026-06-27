@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #0C7288;
+    --secondary-color: #68AAB6;
+    --background: white;
+    --text: #959595;
+}
+.subnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background: #f0f2f4;
+    box-shadow: 0 4px 12px rgb(76 63 63 / 49%);
+    margin: 15px 20px;
+    border-radius: 15px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+.subnav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.subnav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.subnav-item:hover {
+  color: var(--secondary-color);
+}

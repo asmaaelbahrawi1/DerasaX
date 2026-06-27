@@ -20,6 +20,9 @@ import Profile from "../dashboards/Teacher/Profile/Profile";
 import FooterTeacher from "../dashboards/Teacher/FooterTeacher/FooterTeacher";
 import Settings from "../dashboards/Teacher/Settings/Settings";
 
+import ParentDashboard from "../dashboards/Parent/ParentDashboard/ParentDashboard";
+
+
 export default function AppRouter() {
   
   return (
@@ -44,6 +47,9 @@ export default function AppRouter() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/settings" element={<Settings />} />
       <Route path="/footerTeacher" element={<FooterTeacher />} />
+
+      <Route path="/parent-dashboard" element={<ParentDashboard />} />
+
 
     </Routes>
   );

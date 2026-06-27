@@ -151,7 +151,9 @@ export default function SignIn() {
         
 
       </div>   
-            <Link to="/dashboard">Go to Dashboard</Link>
+            <Link to="/dashboard">Go to teacher Dashboard</Link>
+            <Link to="/parent-dashboard">Sign In as Parent</Link>
+
     </div>
   );
 }
