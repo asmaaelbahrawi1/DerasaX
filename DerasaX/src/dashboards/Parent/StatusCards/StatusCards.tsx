@@ -1,73 +1,94 @@
-// import React from "react";
-import './StatusCards.css'
+import "./StatusCards.css";
+import {
+  GraduationCap,
+  ClipboardList,
+  AlertCircle,
+} from "lucide-react";
 
-import {  ClipboardList, AlertCircle } from "lucide-react";
-
-const StatsCards = () => {
+const StatusCards = () => {
   return (
-    <div>
-        <div className="welcome">
-            <h2>Welcome back</h2>
-            <p>Here's what's happening with Adham's education</p>
-        </div>
-    <div className="cards">
+    <section className="status-wrapper">
 
-      {/* Attendance */}
-      <div className="carda">
-        <div className="card-header">
-          <div className="title">
+      <div className="welcome">
+
+        <h1>Welcome back</h1>
+
+        <p>Here's what's happening with Adham's education</p>
+
+      </div>
+
+      <div className="status-cards">
+
+        <div className="status-card">
+
+          <div className="status-top">
+
             <span>Attendance rate</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+
+            <GraduationCap size={20} color="#0C7288"/>
+
           </div>
+
+          <h3>87%</h3>
+
+          <div className="progress">
+
+            <div
+              className="progress-fill"
+              style={{width:"87%"}}
+            />
+
+          </div>
+
         </div>
 
-        <h3>87%</h3>
-        <div className="progress">
-          <div className="fill green"></div>
-        </div>
+        <div className="status-card">
 
-      </div>
+          <div className="status-top">
 
-      {/* Homework */}
-      <div className="carda">
-        <div className="card-header">
-          <div className="title">
             <span>Homework completion</span>
-            <ClipboardList className="icon blue" />
+
+            <ClipboardList size={20} color="#0C7288"/>
 
           </div>
+
+          <h3>80%</h3>
+
+          <div className="progress">
+
+            <div
+              className="progress-fill"
+              style={{width:"80%"}}
+            />
+
+          </div>
+
         </div>
 
-        <h3>80%</h3>
+        <div className="status-card">
 
-        <div className="progress">
-          <div className="fill blue"></div>
-        </div>
+          <div className="status-top">
 
-        <p>4 of 5 assignments completed</p>
-      </div>
-
-      {/* Missing */}
-      <div className="carda">
-        <div className="card-header">
-          <div className="title">
             <span>Missing assignments</span>
-            <AlertCircle className="icon red" />
+
+            <AlertCircle size={20} color="#E53935"/>
 
           </div>
+
+          <div className="missing">
+
+            <h3>1</h3>
+
+            <p>assignment</p>
+
+          </div>
+
         </div>
 
-        <h3>1</h3>
-
-        <p>Math Homework #12</p>
       </div>
 
-    </div>
-    </div>
+    </section>
   );
 };
 
-export default StatsCards;
-
-
-
+export default StatusCards;
