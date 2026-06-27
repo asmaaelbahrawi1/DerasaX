@@ -1,0 +1,39 @@
+.parent-dashboard{
+    width:100%;
+    background:#f7f8fa;
+    min-height:100vh;
+}
+
+.dashboard-container{
+    width:86%;
+    margin:auto;
+    padding:20px 0 70px;
+}
+
+.dashboard-grid{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+}
+
+@media(max-width:1100px){
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.dashboard-container{
+
+width:95%;
+
+}
+
+}

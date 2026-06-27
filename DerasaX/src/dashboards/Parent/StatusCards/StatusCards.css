@@ -1,65 +1,141 @@
-.welcome {
-     margin: 3rem 7rem; 
+.status-wrapper{
+
+    margin-top:35px;
 
 }
 
-.welcome h2 {
-  color: #0a7c86;
-  font-weight: 600;
+.welcome{
+
+    margin-bottom:30px;
+
 }
 
-.welcome p {
-  color: #6b7280;
-  font-size: 14px;
-}
-.cards {
-  display: flex;
-  gap: 5rem;
-  margin: 3rem 7rem;
+.welcome h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#0C7288;
+
+    margin-bottom:10px;
+
 }
 
-.carda {
-  /* flex: 1; */
-  background: #f8fafc;
-  /* padding: 15px; */
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  width: 327px;
-  height: 129px;
-  border-radius: 10px;
-  background: #E6EBF0;
-  padding: 1rem;
+.welcome p{
 
-/* Button Shadow */
-box-shadow: 3px 3px 12px 0 rgba(0, 0, 0, 0.25);
+    color:#8A8A8A;
+
+    font-size:22px;
+
 }
 
-.card-header {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  color: #374151;
-  font-size: 14px;
+.status-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
 }
 
-.card p {
-  /* margin: 10px 0; */
-  font-weight: bold;
+.status-card{
+
+    background:#EAF0F5;
+
+    border-radius:16px;
+
+    padding:26px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
 }
 
-.progress {
-  width: 100%;
-  height: 6px;
-  background: #0C7288;
-  border-radius: 10px;
+.status-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
 }
 
-.progress-fill {
-  height: 100%;
-  background: #0a7c86;
-  border-radius: 10px;
+.status-top span{
+
+    font-size:23px;
+
+    color:#0C7288;
+
+    font-weight:700;
+
 }
-.title{
-    display: flex;
-    justify-content: space-between;
-    font-size: 17px;
+
+.status-card h3{
+
+    font-size:28px;
+
+    color:#0C7288;
+
+    margin-bottom:12px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:white;
+
+    border-radius:30px;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:#0C7288;
+
+    border-radius:30px;
+
+}
+
+.missing{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.missing p{
+
+    color:#0C7288;
+
+    font-size:18px;
+
+}
+
+@media(max-width:1100px){
+
+.status-cards{
+
+grid-template-columns:1fr;
+
+}
+
+.welcome h1{
+
+font-size:35px;
+
+}
+
 }
