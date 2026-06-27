@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/Home/HomePage";
 import RequestDemoPage from "../pages/RequestDemo/RequestDemoPage";
 import SignIn from "../pages/SignIn/SignIn";
+import StudentComingSoon from "../pages/StudentComingSoon/StudentComingSoon";
 
 import Events from "../pages/Events/Events";
 import Activities from "../pages/Activities/Activities";
@@ -21,6 +22,7 @@ import FooterTeacher from "../dashboards/Teacher/FooterTeacher/FooterTeacher";
 import Settings from "../dashboards/Teacher/Settings/Settings";
 
 import ParentDashboard from "../dashboards/Parent/ParentDashboard/ParentDashboard";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 
 export default function AppRouter() {
@@ -37,20 +39,21 @@ export default function AppRouter() {
 
       <Route path="/product" element={<Product />} />
       <Route path="/AboutPage" element={<AboutPage />} />
-      <Route path="/NavTeacher" element={<NavTeacher />} />
-      <Route path="/lessons" element={<Lessons />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/quizzes" element={<Quizzes />} />
-      <Route path="/office-hour" element={<OfficeHour />} />
-      <Route path="/messages" element={<Messages />} />
-      <Route path="/community" element={<Community />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/settings" element={<Settings />} />
-      <Route path="/footerTeacher" element={<FooterTeacher />} />
 
-      <Route path="/parent-dashboard" element={<ParentDashboard />} />
-
-
+      <Route element={<ProtectedRoute />}>
+        <Route path="/NavTeacher" element={<NavTeacher />} />
+        <Route path="/lessons" element={<Lessons />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/quizzes" element={<Quizzes />} />
+        <Route path="/office-hour" element={<OfficeHour />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/footerTeacher" element={<FooterTeacher />} />
+        <Route path="/parent-dashboard" element={<ParentDashboard />} />
+        <Route path="/student-coming-soon" element={<StudentComingSoon />} />
+      </Route>
     </Routes>
   );
 }
