@@ -1,0 +1,66 @@
+import '../../../styles/theme.css'
+// import logo from '../../../assets/images/Drasa-Logo-nf.png'
+import logo from '../../../assets/images/nav-logo.png'
+import instgram from '../../../assets/icons/instgram.svg'
+import linkedin from '../../../assets/icons/linkedin.svg'
+import facebook from '../../../assets/icons/facebook.svg'
+import twitter from '../../../assets/icons/twitter.svg'
+
+import email from '../../../assets/icons/email.svg'
+import mobile from '../../../assets/icons/mobile.svg'
+import vector from '../../../assets/icons/vector.svg'
+
+
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+
+        {/* Left Section */}
+        <div className="footer-left">
+          <div className="logo">
+            <img src={logo} alt="" className='logo-img' />
+            {/* <h2 className='logo-name'>EduTera</h2> */}
+          </div>
+          <p className="email">DrasaX@gmail.com</p>
+          <p className="phone">+20 123 4567 890</p>
+
+          <div className="socials">
+            <img src={instgram} alt="" />
+            <img src={linkedin} alt="" />
+            <img src={facebook} alt="" />
+            <img src={twitter} alt="" />
+
+            
+          </div>
+        </div>
+
+        {/* Pages */}
+        <div className="footer-section">
+          <h3>Quick links</h3>
+          <ul>
+            <li>Help center</li>
+            <li>Privacy policy</li>
+            <li>Terms of service</li>
+          </ul>
+        </div>
+
+    
+
+        {/* Contact */}
+        <div className="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><img src={email} alt="" />EduTera@gmail.com</li>
+            <li><img src={mobile} alt="" />Mansoura - Dakahliya - Egypt</li>
+            <li><img src={vector} alt="" />19123</li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

@@ -1,0 +1,29 @@
+.faq-btn{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background:linear-gradient(to top ,var(--color-secondary) , var(--color-primary)) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+
+}
+.faq-btn:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+.faq-btn img{
+    width: 25px;
+    height: 25px;
+}
+.faq-btn:hover img{
+    filter: brightness(1.2);
+    transition: all 0.3s ease;
+    rotate: 10deg;
+    transition: all 0.3s ease;
+}
