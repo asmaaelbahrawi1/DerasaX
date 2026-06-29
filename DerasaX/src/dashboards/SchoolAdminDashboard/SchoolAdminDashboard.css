@@ -1,0 +1,578 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.school-admin-dashboard {
+  display: flex;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* ============== SIDEBAR ============== */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #0C7288 0%, #68AAB6 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo-icon {
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.menu-item.active {
+  background: white;
+  color: #0C7288;
+  font-weight: 1000;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.menu-label {
+  flex: 1;
+  text-align: left;
+}
+
+.menu-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============== MAIN CONTENT ============== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+}
+
+/* ============== HEADER ============== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 32px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 400px;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #0C7288;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(12, 114, 136, 0.1);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notification-bell {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.bell-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  
+ color: #1a7a9b;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.school-info {
+  text-align: right;
+}
+
+.school-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #0C7288;
+  font-weight: 600;
+}
+
+.school-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ============== CONTENT SECTIONS ============== */
+.dashboard-title {
+  padding: 24px 32px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: white;
+}
+
+.dashboard-title h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  color: #0C7288;
+  font-weight: 700;
+}
+
+.dashboard-title p {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+/* ============== STAT CARDS ============== */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 24px 32px;
+}
+
+.stat-card {
+  background-image: url('../../assets/images/icon-background.png');
+  background-size: cover;
+  background-position: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border: 1px solid #1ba5c6;
+}
+
+.stat-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.stat-value {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-card.status {
+  border-left-color: transparent;
+}
+
+.stat-card.status .stat-value {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* ============== CHARTS SECTION ============== */
+.charts-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 0 32px;
+  margin-bottom: 24px;
+}
+
+.chart-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-card h3 {
+  text-align: center;
+  margin: 0 0 24px 0;
+  font-size: 20px;
+  color: #0C7288;
+  font-weight: 700;
+}
+
+.chart-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: transparent;
+}
+
+.line-chart,
+.bar-chart {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============== RECENT ACTIVITIES ============== */
+.recent-activities {
+  padding: 0 32px 32px;
+}
+
+.activities-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+.activities-card h3 {
+  margin: 0 0 24px 0;
+  font-size: 18px;
+  color: #0C7288;
+  font-weight: 700;
+}
+
+.activities-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.activity-icon-wrapper {
+  background-color: #Eef4f6; /* light greyish teal circle */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.activity-icon-inner {
+  background-color: #0C7288;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-text {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #0C7288;
+  font-weight: 500;
+}
+
+.activity-meta {
+  font-size: 11px;
+  color: #a0a0a0;
+  display: block;
+}
+
+/* ============== SCROLLBAR STYLING ============== */
+.sidebar::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track,
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 768px) {
+  .school-admin-dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 200px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  .menu-footer {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .stat-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-label {
+    display: none;
+  }
+
+  .dashboard-title {
+    padding: 16px;
+  }
+
+  .dashboard-title h1 {
+    font-size: 20px;
+  }
+
+  .stat-cards,
+  .charts-section,
+  .recent-activities {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* ============== DONUT CHART & AI RECOMMENDATION ============== */
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.chart-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #0c7288;
+  font-weight: 700;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0c7288;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.donut-legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 10px;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-color {
+  width: 28px;
+  height: 12px;
+  border-radius: 6px;
+}
+
+.legend-text {
+  font-size: 11px;
+  color: #0c7288;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.chart-wrapper-with-ai {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chart-card-minimal {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+.chart-card-minimal h3 {
+  text-align: center;
+  margin: 0 0 24px 0;
+  font-size: 18px;
+  color: #0c7288;
+  font-weight: 700;
+}
+
+.ai-recommendation-box {
+  background-color: #eef4f6;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ai-recommendation-title {
+  color: #0c7288;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.ai-recommendation-text {
+  color: #888;
+  font-size: 13px;
+  margin-left: 20px;
+}

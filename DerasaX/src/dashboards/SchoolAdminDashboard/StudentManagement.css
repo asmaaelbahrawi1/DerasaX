@@ -1,0 +1,242 @@
+.student-dashboard {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.st-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.st-title-section h2 {
+  color: #0C7288;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.st-title-section p {
+  color: #999;
+  margin: 0;
+  font-size: 14px;
+}
+
+.view-all-btn {
+  background-color: #0C7288;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  height: 40px;
+}
+
+.st-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.st-kpi-card {
+  background-image: url('../../assets/images/icon-background.png');
+  background-size: cover;
+  background-position: center;
+  padding: 16px 20px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  min-height: 90px;
+}
+
+.st-kpi-label {
+  font-size: 12px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.st-kpi-value {
+  margin: 8px 0 0 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.st-kpi-subtext {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: auto;
+}
+
+.st-charts-wrapper, .st-lists-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.st-chart-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.st-chart-card h3 {
+  margin: 0 0 24px 0;
+  color: #0C7288;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.st-donut-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  position: relative;
+}
+
+.donut-chart {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  max-height: 200px;
+}
+
+.st-donut-legend {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #0C7288;
+  font-weight: 600;
+}
+
+.legend-color {
+  width: 12px;
+  height: 8px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.st-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+}
+
+.comp-bar-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.st-ai-recommendation {
+  background-color: #eef2f5;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-rec-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ai-icon {
+  color: #0C7288;
+  font-size: 16px;
+}
+
+.ai-title {
+  color: #0C7288;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ai-text {
+  color: #999;
+  font-size: 13px;
+  padding-left: 2px;
+}
+
+/* LIST COMPONENT STYLES */
+.st-student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.st-student-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.st-student-info p {
+  margin: 0;
+}
+
+.st-student-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0C7288;
+  margin-bottom: 4px !important;
+}
+
+.st-student-grade {
+  font-size: 12px;
+  color: #999;
+}
+
+.st-student-score {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.st-percentage {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.st-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+}
+
+.status-excellent {
+  background-color: #0C7288;
+}
+
+.status-bad {
+  background-color: red;
+}

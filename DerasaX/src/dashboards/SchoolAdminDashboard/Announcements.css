@@ -1,0 +1,84 @@
+.announcements-container {
+  padding: 24px;
+}
+
+.announcements-header {
+  margin-bottom: 32px;
+}
+
+.announcements-header h1 {
+  font-size: 24px;
+  color: #0c7288;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.announcements-header p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.announcements-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 16px;
+  color: #0c7288;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.announcements-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.announcements-table th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #0c7288;
+  font-weight: 500;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.announcements-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* In the image it's centered to the table roughly */
+  margin-top: 16px;
+}
+
+.create-ticket-btn {
+  background-color: #0c7288;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(12, 114, 136, 0.2);
+}
+
+.create-ticket-btn:hover {
+  background-color: #0a5f71;
+}
