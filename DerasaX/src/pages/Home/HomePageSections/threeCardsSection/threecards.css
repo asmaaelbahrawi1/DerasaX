@@ -120,29 +120,29 @@
 }
 
 .modal-text-col h2 {
-  font-size: 2.2em;
-  color: #333;
-  margin-bottom: 8px;
+  font-size: 2rem;
+  color: var(--color-primary);
   font-weight: 700;
 }
 
 .modal-subtitle {
   font-size: 1.1em;
-  color: var(--color-paragraph);
+  color: var(--color-secondary);
   margin-bottom: 20px;
 }
 
+
 .modal-full-description {
-  font-size: 1em;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--color-paragraph);
-  margin-bottom: 25px;
+  margin-bottom: 3rem;
 }
 
 .key-points-title {
   font-weight: bold;
-  color: #444;
-  margin-bottom: 10px;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
 }
 
 .key-points-container {
@@ -153,7 +153,7 @@
 }
 
 .key-point-tag {
-  background: var(--mex, linear-gradient(180deg, #0C7288 0%, #68AAB6 100%));
+  background: linear-gradient(180deg, #0C7288 0%, #68AAB6 100%);
   box-shadow: 3px 3px 12px 0 rgba(0, 0, 0, 0.25);
   color: #fff;
   padding: 8px 15px;
@@ -161,36 +161,75 @@
   font-size: 0.9em;
   font-weight: 500;
 }
-
 .modal-actions {
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  margin-top: auto; 
+  margin-top: 4rem; 
 }
 
 .nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
+  padding: 1rem 4rem;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
 }
+
+.prev-btn,
+.next-btn {
+  background-color: transparent;
+  color: var(--color-primary);
+  box-shadow: none;
+  font-family: "Segoe UI";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
 .explore-btn {
   width: 170px;
   height: 50px;
   border-radius: 15px;
-  background: var(--mex, linear-gradient(180deg, #0C7288 0%, #68AAB6 100%));
- box-shadow: 3px 3px 12px 0 rgba(0, 0, 0, 0.25);
- color: #fff;
+  background: linear-gradient(180deg, #0C7288 0%, #68AAB6 100%);
+  box-shadow: 3px 3px 12px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
 }
+
 .explore-btn:hover {
   transform: translateY(-2px);
 }
-.next-btn , .prev-btn {
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--color-primary);
+
+.next-btn svg {
+  width: 6px;
+  height: 10px;
+}
+
+.prev-btn svg {
+  width: 6px;
+  height: 10px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.2em;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+  transition: color 0.3s ease;
+}
+
+.close-modal-btn:hover {
+  color: #333;
 }
 
 
