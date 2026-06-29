@@ -1,0 +1,121 @@
+.subscriptions-container {
+  padding: 24px;
+}
+
+.subscriptions-header {
+  margin-bottom: 32px;
+}
+
+.subscriptions-header h1 {
+  font-size: 24px;
+  color: #0c7288;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.subscriptions-header p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.current-plan-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 24px 32px;
+  color: white;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Removed ::before pseudo element as we are using the actual background image now */
+
+.card-title-light {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  color: white;
+  position: relative;
+}
+
+.plan-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+
+.plan-detail-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-detail-col h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: white;
+}
+
+.plan-detail-col p {
+  font-size: 12px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.empty-section-indicator {
+  margin-bottom: 32px;
+}
+
+.side-bar-element {
+  width: 14px;
+  height: 120px;
+  background-color: #0c7288;
+  border-radius: 8px;
+}
+
+.billing-info-card {
+  background: #eaeff2;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.billing-title {
+  text-align: center;
+  font-size: 16px;
+  color: #0c7288;
+  font-weight: 600;
+  margin: 0 0 40px 0;
+}
+
+.billing-details {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+
+.billing-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.billing-label {
+  font-size: 12px;
+  color: #7b8e97;
+  margin-bottom: 8px;
+}
+
+.billing-value {
+  font-size: 16px;
+  color: #0c7288;
+  font-weight: 600;
+}

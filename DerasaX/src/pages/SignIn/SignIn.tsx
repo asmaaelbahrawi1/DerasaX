@@ -168,8 +168,10 @@ export default function SignIn() {
         
 
       </div>   
-            <Link to="/dashboard">Go to teacher Dashboard</Link>
+            {/* <Link to="/dashboard">Sign In as teacher </Link> */}
             <Link to="/parent-dashboard">Sign In as Parent</Link>
+            <Link to="/SchoolAdminDashboard">Sign In as Admin</Link>
+
 
     </div>
   );
