@@ -24,6 +24,9 @@ import Settings from "../dashboards/Teacher/Settings/Settings";
 import ParentDashboard from "../dashboards/Parent/ParentDashboard/ParentDashboard";
 import ProtectedRoute from "../components/ProtectedRoute";
 
+import { SchoolAdminDashboard } from "../dashboards/SchoolAdminDashboard/SchoolAdminDashboard";
+
+
 
 export default function AppRouter() {
   
@@ -54,6 +57,13 @@ export default function AppRouter() {
         <Route path="/parent-dashboard" element={<ParentDashboard />} />
         <Route path="/student-coming-soon" element={<StudentComingSoon />} />
       </Route>
+
+      <Route path="/SchoolAdminDashboard" element={<SchoolAdminDashboard />} />
+
+
+
+
+
     </Routes>
   );
 }
